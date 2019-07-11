@@ -1,0 +1,26 @@
+{
+  "name": "css-layouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress",
+    "start": "webpack --progress && webpack-dev-server -d --hot --config webpack.config.js --watch --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-loader": "^1.1.0",
+    "css-hot-loader": "^1.0.4",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "fast-sass-loader": "^1.4.7",
+    "file-loader": "^0.11.1",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}

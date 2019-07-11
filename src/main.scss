@@ -1,0 +1,160 @@
+$purple: #bf7cde;
+$orange: #fbbb6e;
+
+body {
+  margin: 10px 40px;
+  font-size: 1.5em;
+  // background: #f0f0f0;
+  font-family: 'Helvetica Neue';
+}
+
+pre {
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+small {
+  color: #4c4c4c;
+  font-size: .8em;
+}
+
+.main {
+  margin: 20px 0;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .col {
+    box-sizing: border-box;
+    flex-grow: 1;
+    max-width: calc(50% - 10px);
+    min-width: 400px;
+
+    .module {
+      padding: 20px 40px;
+      padding-bottom: 60px;
+    }
+    &:first-child .module {
+      background: -webkit-gradient(linear,left top,left bottom,from(lighten($purple, 20)),to(lighten($purple, 30)))
+    }
+    &:last-child .module {
+      background: -webkit-gradient(linear,left top,left bottom,from(lighten($orange, 16)),to(lighten($orange, 26)))
+    }
+  }
+}
+
+
+
+.container {
+  overflow: scroll;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: $purple;
+  border: 2px solid #7b4892;
+  display: flex;
+  margin-bottom: 40px;
+}
+.item {
+  text-align: center;
+  padding: 20px 0;
+  width: 12%;
+  border-radius: 5px;
+  background-color: $orange;
+  border: 2px solid #f99400;
+}
+
+/* FLEXBOX */
+.flexbox {
+
+  .col:first-child {
+    .mod1 {
+      .container:nth-of-type(1) { flex-direction: row; }
+      .container:nth-of-type(2) { flex-direction: row-reverse; }
+      .container:nth-of-type(3) { flex-direction: column; }
+      .container:nth-of-type(4) { flex-direction: column-reverse; }
+    }
+    .mod2 {
+      .container .item {
+        padding: 20px 25px;
+      }
+      .container:nth-of-type(1) { flex-wrap: nowrap; }
+      .container:nth-of-type(2) { flex-wrap: wrap; }
+      .container:nth-of-type(3) { flex-wrap: wrap-reverse; }
+    }
+    .mod3 {
+      .container:nth-of-type(1) { justify-content: flex-start; }
+      .container:nth-of-type(2) { justify-content: flex-end; }
+      .container:nth-of-type(3) { justify-content: center; }
+      .container:nth-of-type(4) { justify-content: space-between; }
+      .container:nth-of-type(5) { justify-content: space-around; }
+      .container:nth-of-type(6) { justify-content: space-evenly; }
+    }
+    .mod4 {
+      .container .item {
+        &:nth-of-type(1) { padding: 20px 0; }
+        &:nth-of-type(2) { padding: 40px 0; }
+        &:nth-of-type(3) { padding: 10px 0; }
+        &:nth-of-type(4) { padding: 30px 0; }
+        &:nth-of-type(5) { padding: 50px 0; }
+      }    
+      .container:nth-of-type(1) { align-items: flex-start; }
+      .container:nth-of-type(2) { align-items: flex-end; }
+      .container:nth-of-type(3) { align-items: center }
+      .container:nth-of-type(4) { align-items: baseline; }
+      .container:nth-of-type(5) { align-items: stretch; }
+    }
+
+    .mod5 {
+      .container {
+        height: 300px;
+        flex-wrap: wrap;
+        .item {
+          &:nth-of-type(1) { flex-grow: 1; }
+          &:nth-of-type(2) { flex-grow: 2; }
+          &:nth-of-type(3) { flex-grow: 2; }
+          &:nth-of-type(4) { flex-grow: 5; }
+          &:nth-of-type(5) { flex-grow: 4; }
+          &:nth-of-type(6) { flex-grow: 1; }
+          &:nth-of-type(7) { flex-grow: 0; }
+          &:nth-of-type(8) { flex-grow: 4; }
+          &:nth-of-type(9) { flex-grow: 2; }
+          &:nth-of-type(10) { flex-grow: 6; }
+          &:nth-of-type(11) { flex-grow: 3; }
+          &:nth-of-type(2) { flex-grow: 2; }
+        }
+      }
+      .container:nth-of-type(1) { align-content: flex-start; }
+      .container:nth-of-type(2) { align-content: flex-end; }
+      .container:nth-of-type(3) { align-content: center; }
+      .container:nth-of-type(4) { align-content: space-between; }
+      .container:nth-of-type(5) { align-content: space-around; }
+      .container:nth-of-type(6) { align-content: stretch; }
+    }  
+  }
+}
+
+
+/* GRID */
+.grid {
+  .col {
+    max-width: 100%;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(3, auto);
+
+    }
+
+    .item {
+      padding: 10px 0;
+      width: auto;
+      place-self: start stretch;
+
+      &:nth-of-type(1) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+    }
+  } 
+}

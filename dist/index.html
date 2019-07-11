@@ -1,0 +1,368 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>CSS Layouts</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="monokai-sublime.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Flexbox</h1>
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+        
+        <div class="flexbox main">
+
+          <!-- CONTAINER -->
+          <div class="col">
+
+            <h2 style="color: #7b4892">CONTAINER</h2>
+            
+            <!-- flex-direction -->
+            <div class="module mod1">
+             
+              <h3>flex-direction</h3>
+              <small>row | row-reverse | column | column-reverse</small>
+
+              <pre><code class="css">
+  .container {
+    flex-direction: row /** default **/
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+              <pre><code class="css">
+  .container {
+    flex-direction: row-reverse
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+              <pre><code class="css">
+  .container {
+    flex-direction: column
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+              <pre><code class="css">
+  .container {
+    flex-direction: column-reverse
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+              
+            </div>
+
+            <!-- flex-wrap -->
+            <div class="module mod2">
+              
+              <h3>flex-wrap</h3>
+              <small>nowrap | wrap | wrap-reverse</small>
+
+              <pre><code class="css">
+  .container {
+    flex-wrap: nowrap
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    flex-wrap: wrap
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    flex-wrap: wrap-reverse
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+            </div>
+
+            <!-- justify-content -->
+            <div class="module mod3">
+              
+              <h3>justify-content</h3>
+              <small>flex-start | flex-end | center | space-between | space-around | space-evenly</small>
+
+              <pre><code class="css">
+  .container {
+    justify-content: flex-start
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    justify-content: flex-end
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    justify-content: center
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    justify-content: space-between
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    justify-content: space-around
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    justify-content: space-evenly
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+            </div>
+
+            <!-- align-items -->
+            <div class="module mod4">
+              
+              <h3>align-items</h3>
+              <small>flex-start | flex-end | center | baseline | stretch</small>
+
+              <pre><code class="css">
+  .container {
+    align-items: flex-start
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-items: flex-end
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-items: center
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-items: baseline
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-items: stretch
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+              </div>
+
+            </div>
+
+            <!-- align-content -->
+            <div class="module mod5">
+              
+              <h3>align-content</h3>
+              <small>flex-start | flex-end | center | space-between | space-around | stretch</small>
+
+              <pre><code class="css">
+  .container {
+    align-content: flex-start
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-content: flex-end
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-content: center
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-content: space-between
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-content: space-around
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+              <pre><code class="css">
+  .container {
+    align-content: stretch
+  }
+              </code></pre>
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+          <!-- ITENS -->
+          <div class="col">
+
+            <h2 style="color: #f99400">ITENS</h2>
+
+            <div class="module">
+
+              <pre><code class="css">
+.container {
+  align-items: flex-end;
+  align-content: space-around;
+  flex-direction: row; /** this is comment **/
+  justify-content: space-around;
+}
+              </code></pre>
+              <div class="container">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">7</div>
+              </div>
+            </div>
+
+          </div>
+            
+        </div>
+
+
+        <!-- GRID -->
+        <h1>Grid</h1>
+        <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+
+        <div class="grid main">
+
+          <!-- CONTAINER -->
+          <div class="col">
+
+            <h2 style="color: #7b4892">CONTAINER</h2>
+            
+            <!-- flex-direction -->
+            <div class="module mod1">
+
+              <div class="container">
+                <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div><div class="item">5</div>
+                <div class="item">6</div><div class="item">7</div><div class="item">8</div><div class="item">9</div><div class="item">10</div>
+                <div class="item">11</div><div class="item">12</div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+    </body>
+    <script src="highlight.pack.js"></script>
+    <script src="main.js"></script>
+    <script>hljs.initHighlightingOnLoad()</script>
+</html>
